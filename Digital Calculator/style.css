@@ -53,10 +53,11 @@ h1{
   color: white;
   cursor: pointer;
 }
-.display {
+#display {
   width: 100%;
   padding: 20px;
   font-size: 40px;
+  color: #0c0c0c;
   text-align: right;
   background-color: #9fc2ac;
   border: none;
@@ -85,4 +86,13 @@ h1{
   }
 .reset:active {
   background-color: #c02e2e;
+  }
+  .equals{
+    background-color: rgb(189, 189, 16);
+  }
+  .equals:hover {
+    background-color: rgb(165, 165, 75);
+  }
+  .equals:active {
+    background-color: rgb(173, 173, 129);
   }
