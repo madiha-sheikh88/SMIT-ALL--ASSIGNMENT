@@ -23,7 +23,74 @@
 <body>
     <h1>JS assignment chp 43-48</h1>
     <h2>EVENTS</h2>
+<!-- 1.  Show an alert box on click on a link. -->
+<a href="javascript:void(0)" onClick="alert('hello!');">Click Here</a>
+<br><br><br><br><br><br>
 
-    <script src="./app.js"></script>
+<!-- 2. Display some Mobile images in browser. On click on an image Show the message in alert to user. -->
+<div style="display: flex; justify-content: space-around; align-items: center;">
+<img src="https://png.pngtree.com/png-vector/20250307/ourmid/pngtree-latest-model-mobile-phone-png-image_15739741.png" alt="Mobile Image" width="200" height="400" onClick="alert('You clicked on the mobile 1!');">
+<img src="https://image01-in.oneplus.net/media/202604/29/6afc82e6f256aafd2943dd66bbc00e3e.png?x-amz-process=image/format,webp/quality,Q_80" alt="Mobile Image" width="200" height="400" onClick="alert('You clicked on the mobile 2!');">
+<img src="https://img.magnific.com/free-psd/new-smartphone-17-pro-social-media-story-design-template_47987-33775.jpg?semt=ais_hybrid&w=740&q=80" alt="Mobile Image" width="200" height="400" onClick="alert('You clicked on the mobile 3!');">
+</div>
+
+<!-- 3. Display 10 student records in table and each row should contain a delete button. If you click on a button to delete a record, entire row should be deleted. -->
+<table style="width: 100%; border: 1px solid whitesmoke; text-align: center; margin-top: 50px;">
+    <tr>
+        <th>Student Name</th>
+        <th>Age</th>
+        <th>Class</th>
+        <th>Action</th>
+    </tr>
+    <tr>    
+        <td>Madiha Sheikh</td>
+        <td>20</td>
+        <td>12th</td>
+        <td><button onClick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+        <td>Umme Salma</td>
+        <td>19</td>
+        <td>11th</td>
+        <td><button onClick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+        <td>Fatima Ali</td>
+        <td>21</td>
+        <td>12th</td>
+        <td><button onClick="deleteRow(this)">Delete</button></td>
+    </tr>
+</table>
+<script>
+function deleteRow(button) {
+    let row = button.closest("tr"); 
+    row.remove();
+}
+</script>
+ <br><br><br><br>
+<!-- 4. Display an image in browser. Change the picture on mouseover and set the first picture on mouseout.  -->
+<img src="https://i.pinimg.com/736x/2e/cf/06/2ecf067a2069128f44d75d25a32e219e.jpg" alt="Image" width="300" height="300" onmouseover="this.src='https://img.magnific.com/free-photo/pink-gerbera-flower-garden_1373-15.jpg?semt=ais_hybrid&w=740&q=80'" onMouseout="src='https://i.pinimg.com/736x/2e/cf/06/2ecf067a2069128f44d75d25a32e219e.jpg'">
+
+<!-- 5. Show a counter in browser. Counter should increase on click on increase button and decrease on click on decrease button. And show updated counter value in browser. -->
+
+<div>
+    <h2>Counter</h2>
+    <button style="width: 80px; background-color: #e00c0c;" onClick="decreaseCounter()">-</button>
+    <span id="counterValue">0</span>
+    <button style="width: 80px; background-color: #4CAF50;" onClick="increaseCounter()">+</button>
+</div>
+<script>
+    let counter = 0;
+
+    function increaseCounter() {
+        counter++;
+        document.getElementById("counterValue").innerHTML = counter;
+    }
+
+    function decreaseCounter() {
+        counter--;
+        document.getElementById("counterValue").innerHTML = counter;
+    }
+</script>
 </body>
 </html>
