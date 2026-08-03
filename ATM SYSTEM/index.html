@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical: ATM System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div id="atmsystem">
+            <h1 class="headingatm">ATM SYSTEM</h1>
+            <input type="number" size="50" id="display" placeholder="Enter Amount here" onFocus="this.style.backgroundColor='yellow';" onblur="this.style.backgroundColor='white';">
+        <div class="all-btns">
+            <button style="width: 120px; height: 40px ; background-color: #87d668;" onClick="deposit()">Deposit</button>
+            <button style="width: 120px;  height: 40px ; background-color: #87d668;" onClick="withdraw()">Withdraw</button>
+            <button style="width: 120px;  height: 40px ; background-color: #87d668;" onClick="checkBalance()">Check Balance</button>
+            <button style="width: 120px;  height: 40px ; background-color: #e00c0c;" onClick="clearDisplay()">Clear</button>
+        </div>
+    <div id="balanceValue"></div>
+        </div>
+
+<script>
+
+    let initialBalance = 5000;
+    let displayInput = document.getElementById("display");
+    let balanceValue = document.getElementById("balanceValue");
+
+        function checkBalance(){
+            balanceValue.innerHTML = "Current Balance: " + initialBalance;
+        }
+
+        function deposit() {
+            let amount = parseFloat(displayInput.value);
+            if (isNaN(amount) || amount <= 0) {
+                balanceValue.innerHTML ="Error: Enter a valid amount";
+            } else {
+                initialBalance += amount;
+                balanceValue.innerHTML = "Deposited: " + amount + "<br> Current Balance: " + initialBalance;
+            }
+        }
+
+        function withdraw() {
+            let amount = parseFloat(displayInput.value);
+            if (isNaN(amount) || amount <= 0) {
+                balanceValue.innerHTML ="Error: Enter a valid amount";
+            } else {
+                initialBalance -= amount;
+                balanceValue.innerHTML = "Withdrawn: " + amount + "<br> Current Balance: " + initialBalance;
+            }
+        }
+
+        function clearDisplay() {
+            displayInput.value = "";
+            balanceValue.innerHTML = "";
+        }
+</script>
+    </section>
+</body>
+</html>

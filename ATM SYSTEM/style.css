@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./asset/images.jfif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+#atmsystem {
+  font-family: 'Roboto', sans-serif;
+  max-width: 500px;
+  height: auto;
+  background-color: #DBD3D8;
+  margin: 50px auto;
+  border: 2px solid #0c0c0c;
+  border-radius: 10px;
+  box-shadow: 20px 28px 20px 0px #DBD3D8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px
+}
+
+.all-btns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+button{
+    box-shadow: inset 0px 4px 12px 0px rgba(0, 0, 0, 0.20);
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+#balanceValue {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  background-color: transparent;
+  height: auto;
+  width: auto;
+  text-align: center;
+  margin: 10px;
+}
+
+#display {
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+      border-radius: 5px;
+    border: 1px solid #ffffff;
+    box-shadow: 43px 4px 20px 0px rgba(13, 13, 13, 0.10);
+}
