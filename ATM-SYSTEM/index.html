@@ -42,7 +42,9 @@
 
         function withdraw() {
             let amount = parseFloat(displayInput.value);
-            if (isNaN(amount) || amount <= 0) {
+            if (amount > initialBalance) {
+                balanceValue.innerHTML ="Insufficient Balance";
+            }  else if (isNaN(amount) || amount <= 0) {
                 balanceValue.innerHTML ="Error: Enter a valid amount";
             } else {
                 initialBalance -= amount;
