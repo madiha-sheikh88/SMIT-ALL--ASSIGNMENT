@@ -4,26 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS assignment chp 49-52</title>
-    <style>
-        *{
-            background-color: black;
-            color: antiquewhite;
-        }
-        h1, h2{
-            color: whitesmoke;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-weight: 500;
-            text-align: center;
-        }
-        h2{
-            font-weight: 300;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>JS assignment chp 49-52</h1>
     <h2>EVENTS</h2>
+<!-- 1. Create a signup form and display form data in your web page on submission. -->
 
-    <script src="./app.js"></script>
+<!-- <form action="" id="signup-form">
+    <label for="name">Name:
+    <input type="text" id="name" name="name" required></label>
+    <br><br>
+    <label for="email">Email:
+    <input type="email" id="email" name="email" required></label>
+    <br><br>
+    <label for="password">Password:
+    <input type="password" id="password" name="password"></label>
+    <br><br>
+    <button type="submit">Sign Up</button>
+</form> -->
+
+<!-- 2. Suppose in your webpage there is content area in which you have entered your item details, but user can only see some details on first look. When user clicks on “Read more” button, full detail of that particular item will be displayed.  -->
+
+<div class="main">
+    <p>This is a brief description of the item.</p>
+    <button id="read-more">Read more</button>
+    <p id="full-details" style="display: none;">This is the full detail of the item. lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
+
+
+<script src="./script.js"></script>
 </body>
 </html>
