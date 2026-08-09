@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    max-width: 100vw;
+    background: linear-gradient(#F103F7,#02D1D5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+#register-form-wrapper{
+    max-width: 500px;
+    min-height: auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+input{
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 6px 0px;
+  color: rgb(96, 88, 88);
+  font-size: 17px;
+  border: 2px solid gray;
+  background-color: white;
+  outline: none;
+}
+
+#course{
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin: 6px 0px;
+  color: rgb(96, 88, 88);
+  font-size: 17px;
+  border: 2px solid gray;
+  background-color: white;
+  outline: none;
+}
+label{
+  color: #3f55d4;
+  font-weight: bold;
+}
+
+button{
+    width: 200px;
+    padding: 10px;
+    color: white;
+    background-color: #776CE6;
+    border-radius: 5px;
+    border: 2px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+button:active{
+    background-color: #F103F7;
+}
+.allbtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#data-display-container{
+    display: none;
+    border: 2px solid #ccc;
+    padding: 15px;
+    margin-top: 20px;
+    max-width: 500px;
+    min-height: auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+@media (max-width: 570px) {
+    #register-form{
+        width: 90%;
+    }
+    button{
+        width: 100%;
+    }
+    .allbtn{
+        flex-direction: column;
+    }
+}
+@media (max-width: 400px) {
+  h1{
+    font-size: 20px;
+  }
+  #register-form{
+    width: 100%;
+  }
+}
+p{
+    font-size: 18px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}

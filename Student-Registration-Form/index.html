@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="form-heading">Student Registration Form</h1>
+    <div id="register-form-wrapper">
+    <form id="register-form">
+         <label for="name">Student Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName">
+        <label for="cnic">CNIC:</label>
+        <input type="text" id="cnic" name="cnic">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="">Select a course</option>
+            <option value="math">Mathematics</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+        </select>
+        <div class="allbtn">
+        <button type="submit">Register</button>
+        <button type="reset">Reset</button>
+        </div>
+    </form>
+</div>
+<div id="data-display-container" >
+    <h3>Registration Details</h3>
+<p><span><strong>Name:</strong></span> <span id="display-name"></span></p>
+<p><span><strong>Father's Name:</strong></span> <span id="display-fatherName"></span></p>
+<p><span><strong>CNIC:</strong></span> <span id="display-cnic"></span></p>
+<p><span><strong>Age:</strong></span> <span id="display-age"></span></p>
+<p><span><strong>Email:</strong></span> <span id="display-email"></span></p>
+<p><span><strong>Course:</strong></span> <span id="display-course"></span></p>
+<p><span><strong>Date:</strong></span> <span id="display-date"></span></p>
+
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
