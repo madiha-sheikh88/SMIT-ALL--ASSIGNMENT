@@ -1,0 +1,103 @@
+:root{
+    --mainColor: #fff;
+    --blueColor: #0b73b7;
+    --greenColor: #93be54;
+    --blackColor: #000;
+    --grayColor: #7A8791;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 2px red;
+    background-color: var(--mainColor);
+}
+/* navbar css */
+.btn-enroll{
+    background-color: var(--blueColor);
+}
+.dropdown-toggle::after{
+    content: "^";
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+    border: none;
+    vertical-align: middle;
+}
+.dropdown-toggle.show::after{
+    transform: rotate(0deg);
+}
+.btn-text , .btn-icon , .btn-icon svg{
+    color: var(--mainColor);
+    background-color: var(--blueColor);
+}
+
+.nav-link{
+    transition: transform 0.3s ease;
+}
+.nav-link:hover{
+    transform: scale(1.1);
+}
+/* hero section css */
+.hero-container{
+    width: 100%;
+    max-height: 250px;
+    background: linear-gradient(to left , var(--greenColor) , var(--blueColor));
+    color: var(--mainColor);
+}
+.Reg-Form{
+    color: var(--mainColor) !important;
+}
+/* form links section css */
+.regform{
+    background-color: var(--blueColor);
+    color: var(--mainColor);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s ease;
+}
+.regform:hover , .result:hover, .dwnld-id:hover , .test-status:hover{
+    transform: scale(1.1);
+}
+.svg-form , .form-reg-link{
+   background-color: var(--blueColor);
+}
+
+/* location and course details section */
+
+label{
+    font-weight: 600;
+}
+option{
+    font-weight: 400;
+    font-size: 16px;
+}
+span.mandatory{
+    color: red;
+}
+
+
+
+
+
+/* footer css */
+.footer-container{
+    background-color: var(--blackColor)!important;
+    color: var(--mainColor);
+    width: 100%;
+    min-height: 100px;
+}
+footer , .footer-row{
+    background-color: transparent;
+    color: var(--mainColor);
+}
+footer * {
+        background-color: transparent;
+    color: var(--mainColor);
+}
+footer li{
+    color: var(--grayColor);
+    font-weight: 500;
+}
