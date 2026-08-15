@@ -15,6 +15,7 @@
 /* navbar css */
 .btn-enroll{
     background-color: var(--blueColor);
+    height: 40px;
 }
 .dropdown-toggle::after{
     content: "^";
@@ -77,12 +78,107 @@ option{
 span.mandatory{
     color: red;
 }
+/* upload photo css */
+.border-pic{
+    border: 2px dashed #d6dcf3 !important;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.upload-svg{
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #d6dcf3;
+}
 
+.hidden {
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+}
 
-
-
+label[for="picture-upload"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px; 
+  border-radius: 10px;
+  border: none;
+  margin: 0 auto;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+/* terms and condition section css */
+.terms *{
+    background-color: transparent;
+}
+.terms{
+    border: 2px solid #d6dcf3;
+    background-color: #e6edf5 !important;
+    padding: 10px;
+    border-radius: 5px;
+}
+.policy-div{
+    border: none;
+    margin: 5px;
+    background-color: transparent;
+}
+.policy-div span{
+    color: var(--blueColor);
+    background-color: transparent;
+}
+.form-check-input{
+    border: 1px solid var(--blackColor);
+    padding-left: 10px;
+}
+.form-check-label{
+    padding-left: 10px;
+}
+/* notice div css */
+.notice{
+    background-color: #e6edf5;
+    margin-top: 20px;
+}
+.notice * {
+    background-color: transparent;
+}
+/* button submit */
+span .btn-svg{
+    background-color: transparent;
+}
+button span{
+    background-color: transparent;
+}
+.btn-submit{
+    width: 100%;
+    padding: 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
 
 /* footer css */
+.footer-bcakg{
+    width: 100%;
+    background-color: var(--blackColor)!important;
+    color: var(--mainColor);
+    width: 100%;
+    min-height: 100px;
+}
 .footer-container{
     background-color: var(--blackColor)!important;
     color: var(--mainColor);
