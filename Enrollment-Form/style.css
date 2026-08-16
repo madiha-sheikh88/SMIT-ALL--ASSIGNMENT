@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 :root{
     --mainColor: #fff;
     --blueColor: #0b73b7;
@@ -11,11 +12,30 @@
     box-sizing: border-box;
     border: 2px red;
     background-color: var(--mainColor);
+    font-family: "Montserrat", sans-serif;
 }
 /* navbar css */
 .btn-enroll{
     background-color: var(--blueColor);
     height: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-enroll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.35);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+}
+
+.btn-enroll:hover::before {
+    left: 130%;
 }
 .dropdown-toggle::after{
     content: "^";
@@ -31,7 +51,20 @@
     color: var(--mainColor);
     background-color: var(--blueColor);
 }
+.btn-icon {
+    display: inline-flex;
+    animation: floating 1.2s ease-in-out infinite;
+}
 
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
 .nav-link{
     transition: transform 0.3s ease;
 }
@@ -41,7 +74,7 @@
 /* hero section css */
 .hero-container{
     width: 100%;
-    max-height: 250px;
+    max-height: 300px;
     background: linear-gradient(to left , var(--greenColor) , var(--blueColor));
     color: var(--mainColor);
 }
@@ -169,6 +202,11 @@ button span{
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    transform: scale(1.06); /* Increases the button size by 6% */
 }
 
 /* footer css */
@@ -197,3 +235,54 @@ footer li{
     color: var(--grayColor);
     font-weight: 500;
 }
+
+/* sticky position chatbot */
+  @keyframes floatUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+
+  .halo-effect {
+    animation: floatUpDown 2s ease-in-out infinite;
+  }
+
+  .chat-bounce-btn {
+    position: relative;
+    z-index: 2;
+    border: none;
+    transition: transform 0.2s ease, filter 0.2s ease;
+  }
+
+  /* Halo Ring Keyframes */
+  @keyframes pulseHalo {
+    0% {
+      transform: scale(1);
+      opacity: 0.6;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  /* Creating the Hollow Ring behind the button */
+  .halo-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #0d6efd; /* Same blue color as the button */
+    box-shadow: 0 0 8px rgba(13, 110, 253, 0.4);
+    z-index: 1; /* Sits directly behind the main button */
+    pointer-events: none; /* Allows clicks to pass through to the button */
+    animation: pulseHalo 2s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+
+  .halo-effect:hover .chat-bounce-btn {
+    transform: scale(1.08);
+    filter: brightness(1.1);
+  }

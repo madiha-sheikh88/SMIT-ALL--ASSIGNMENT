@@ -13,8 +13,8 @@
 <body>
     <section class="container">
         <!-- navbar starts here -->
-        <nav class="navbar navbar-expand-md bg-body">
-            <div class="container-fluid d-flex gap-3">
+        <nav class="navbar navbar-expand-md bg-body fixed-top shadow-sm">
+            <div class="container d-flex gap-3">
                 <a class="navbar-brand" href="#"><img src="./asset/transparent_logo.png" alt="SMIT logo" width="80"
                         height="35"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,8 +38,8 @@
                         <li class="nav-item"><a class="nav-link" href="#">Check Result</a></li>
                     </ul>
                     <div class="btn-enroll rounded-pill">
-                        <button class="button-enroll btn d-flex align-items-center justify-content-center" type="submit"><span
-                                class="btn-text">Enroll Now</span><span class="btn-icon"><svg
+                        <button class="button-enroll btn d-flex align-items-center justify-content-center"
+                            type="submit"><span class="btn-text">Enroll Now</span><span class="btn-icon"><svg
                                     xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                     stroke-linejoin="round" class="lucide lucide-arrow-up-right h-4 w-4"
@@ -53,8 +53,22 @@
         </nav>
     </section>
     <!-- navbar ends here -->
+<!-- Floating Chat Button Container -->
+<div class="position-fixed bottom-0 end-0 m-4 z-3">
+  <!-- Added 'halo-effect' wrapper class -->
+  <div class="position-relative halo-effect">
+    <button class="btn btn-primary rounded-circle d-flex align-items-center justify-content-center chat-bounce-btn shadow-lg" 
+            style="width: 60px; height: 60px; background-color: #0d6efd;" 
+            aria-label="Chat with us">
+      <!-- White Chat SVG Icon -->
+      <svg class="bg-transparent" xmlns="http://w3.org" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+      </svg>
+    </button>
+  </div>
+</div>
     <!-- hero section starts -->
-    <section class="hero-container d-flex">
+    <section class="hero-container d-flex align-items-center pt-5">
         <div class="Reg-Form container py-5 text-start hero-sec bg-transparent">
             <p class="bg-transparent"><span class="svg-cap bg-transparent"><svg class="bg-transparent"
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -79,10 +93,10 @@
     </section>
     <!-- hero section ends -->
     <!-- form link section starts here -->
-     <form id="registration-form">
-    <section class="container">
-        <div class="form-links d-flex justify-content-center align-items-center px-3 mx-auto py-5 gap-5">
-            <div class="regform"> <span class="svg-form"><svg class="svg-form" xmlns="http://www.w3.org/2000/svg"
+    <form id="registration-form">
+        <section class="container">
+            <div class="form-links row row-cols-auto row-cols-md-4 g-3 justify-content-center align-items-center mx-5 py-5">
+            <a href="#"><div class="regform"> <span class="svg-form"><svg class="svg-form" xmlns="http://www.w3.org/2000/svg"
                         width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-clipboard-list w-5 h-5 sm:w-5 sm:h-5" aria-hidden="true">
@@ -93,7 +107,7 @@
                         <path d="M12 16h4"></path>
                         <path d="M8 11h.01"></path>
                         <path d="M8 16h.01"></path>
-                    </svg></span><span class="form-reg-link">Registration Form</span></div>
+                    </svg></span><span class="form-reg-link">Registration Form</span></div></a> 
             <div class="dwnld-id"><span class="svg-id"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round" class="lucide lucide-id-card w-5 h-5 sm:w-5 sm:h-5" aria-hidden="true">
@@ -123,208 +137,219 @@
                         <path d="M16 17H8"></path>
                     </svg></span><span>Result</span></div>
             </div>
-    </section>
-    <!-- form link section ends here -->
-    <!-- location and course details section starts here -->
-    <section class="container">
-        <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-location"><svg
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-map-pin w-5 h-5" aria-hidden="true" style="color:#0B73B7">
-                    <path
-                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                    </path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                </svg></span><span>Location & Course Details</span></h3>
-        <div class="row">
-            <!-- Select Country -->
-            <div class="col-md-12 col-lg-6"> <label for="country" class="form-label">Select Country <span
-                        class="mandatory">*</span></label>
-                <select id="country" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select Country</option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="Turkey">Turkey</option>
-                    <option value="Yemen">Yemen</option>
-                </select>
+        </section>
+        <!-- form link section ends here -->
+        <!-- location and course details section starts here -->
+        <section class="container">
+            <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-location"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-map-pin w-5 h-5" aria-hidden="true" style="color:#0B73B7">
+                        <path
+                            d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                        </path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg></span><span>Location & Course Details</span></h3>
+            <div class="row">
+                <!-- Select Country -->
+                <div class="col-md-12 col-lg-6"> <label for="country" class="form-label">Select Country <span
+                            class="mandatory">*</span></label>
+                    <select id="country" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option value="" selected>Select Country</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Turkey">Turkey</option>
+                        <option value="Yemen">Yemen</option>
+                    </select>
+                </div>
+                <!-- Select class preference field -->
+                <div class="col-md-12 col-lg-6"> <label for="class-preference" class="form-label">Select class
+                        preference
+                        <span class="mandatory">*</span></label>
+                    <select disabled id="class-preference" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option value="" selected>Select class preference</option>
+                        <option value="Pakistan">Online</option>
+                        <option value="Turkey">Onsite</option>
+                    </select>
+                </div>
+                <!-- Select Gender -->
+                <div class="col-md-12 col-lg-6"> <label for="select-gender" class="form-label">Select Gender <span
+                            class="mandatory">*</span></label>
+                    <select disabled id="select-gender" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option value="" selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <!-- select city    -->
+                <div class="col-md-12 col-lg-6"> <label for="select-city" class="form-label">Select City <span
+                            class="mandatory">*</span></label>
+                    <select disabled id="select-city" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option value="" selected>Select City</option>
+                        <option value="islamabad">Islamabad</option>
+                        <option value="karachi">Karachi</option>
+                        <option value="lahore">Lahore</option>
+                    </select>
+                </div>
+                <!-- Select Course field -->
+                <div class="col-md-12 col-lg-6"> <label for="select-course" class="form-label">Select Course <span
+                            class="mandatory">*</span></label>
+                    <select disabled id="select-course" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option value="" selected>Select course</option>
+                        <option value="webandapp">Web and App Development</option>
+                        <option value="dataanalytics">Data Analytics</option>
+                        <option value="digitalmarketing">Digital Marketing</option>
+                    </select>
+                </div>
+                <!-- Select Campus -->
+                <div class="col-md-12 col-lg-6"> <label for="select-campus" class="form-label">Select Campus <span
+                            class="mandatory">*</span></label>
+                    <select disabled id="select-campus" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option value="" selected>Select campus</option>
+                        <option value="Alyabad">Alyabad</option>
+                        <option value="HajyaniSakeena">Hajyani Sakeena</option>
+                        <option value="Paposh">Paposh</option>
+                    </select>
+                </div>
             </div>
-            <!-- Select class preference field -->
-            <div class="col-md-12 col-lg-6"> <label for="class-preference" class="form-label">Select class preference
-                    <span class="mandatory">*</span></label>
-                <select id="class-preference" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select class preference</option>
-                    <option value="Pakistan">Online</option>
-                    <option value="Turkey">Onsite</option>
-                </select>
+        </section>
+        <!-- location and course details section ends here -->
+        <!-- Personal Information section starts here -->
+        <section class="container">
+            <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-info"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user w-5 h-5" aria-hidden="true" style="color:#0B73B7">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg></span><span>Personal Information</span></h3>
+            <div class="row">
+                <!-- Full Name field -->
+                <div class="col-md-12 col-lg-6"> <label for="full-name" class="form-label">Full Name <span
+                            class="mandatory">*</span></label>
+                    <input type="text" class="form-control form-control-md p-3 mb-3" id="full-name"
+                        placeholder="Enter your full name">
+                </div>
+                <!-- Father Name field -->
+                <div class="col-md-12 col-lg-6"> <label for="Father-name" class="form-label">Father Name <span
+                            class="mandatory">*</span></label>
+                    <input type="text" class="form-control form-control-md p-3 mb-3" id="Father-name"
+                        placeholder="Enter Father's name">
+                </div>
+                <!-- date of birth field -->
+                <div class="col-md-12 col-lg-6"> <label for="dob" class="form-label">Date of Birth <span
+                            class="mandatory">*</span></label>
+                    <input type="date" class="form-control form-control-md p-3 mb-3" id="dob">
+                </div>
+                <!-- Email field -->
+                <div class="col-md-12 col-lg-6"> <label for="email" class="form-label">Email <span
+                            class="mandatory">*</span></label>
+                    <input type="email" class="form-control form-control-md p-3 mb-3" id="email"
+                        placeholder="your.email@example.com">
+                </div>
+                <!-- Phone Number field -->
+                <div class="col-md-12 col-lg-6"> <label for="phone-number" class="form-label">Phone Number <span
+                            class="mandatory">*</span></label>
+                    <input type="tel" class="form-control form-control-md p-3 mb-3" id="phone-number"
+                        placeholder="Enter phone number">
+                </div>
+                <!-- Father'sPhone Number field -->
+                <div class="col-md-12 col-lg-6"> <label for="Fphone-number" class="form-label">Father's Phone <span
+                            class="mandatory">*</span></label>
+                    <input type="tel" class="form-control form-control-md p-3 mb-3" id="Fphone-number"
+                        placeholder="Enter phone number">
+                </div>
+                <!-- ID Number field -->
+                <div class="col-md-12 col-lg-6"> <label for="ID-No" class="form-label">ID Number <span
+                            class="mandatory">*</span></label>
+                    <input type="text" class="form-control form-control-md p-3 mb-3" id="ID-No"
+                        placeholder="Enter ID number">
+                </div>
+                <!-- Father's ID Number field -->
+                <div class="col-md-12 col-lg-6"> <label for="FID-No" class="form-label">Father's ID Number <span
+                            class="mandatory">*</span></label>
+                    <input type="text" class="form-control form-control-md p-3 mb-3" id="FID-No"
+                        placeholder="Enter  ID number">
+                </div>
+                <!-- address field -->
+                <div class="col-12"> <label for="address" class="form-label">Address <span
+                            class="mandatory">*</span></label>
+                    <input type="text" class="form-control form-control-md pb-5 mb-3" id="address"
+                        placeholder="Enter your complete address (Minimum 10 characters)">
+                </div>
             </div>
-            <!-- Select Gender -->
-            <div class="col-md-12 col-lg-6"> <label for="select-gender" class="form-label">Select Gender <span
-                        class="mandatory">*</span></label>
-                <select id="select-gender" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+        </section>
+        <!-- Personal Information section ends here -->
+        <!-- Education & Technical Details section starts here -->
+        <section class="container">
+            <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-education"><svg class="bg-transparent"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-graduation-cap w-3 h-3 sm:w-4 sm:h-4" aria-hidden="true">
+                        <path
+                            d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
+                        </path>
+                        <path d="M22 10v6"></path>
+                        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+                    </svg></span><span>Education & Technical Details</span></h3>
+            <div class="row">
+                <!-- Select Computer Proficiency -->
+                <div class="col-md-12 col-lg-6"> <label for="computer-proficiency" class="form-label">Computer
+                        Proficiency
+                        <span class="mandatory">*</span></label>
+                    <select id="computer-proficiency" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option selected>Select your Computer Proficiency</option>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="expert">Expert</option>
+                    </select>
+                </div>
+                <!-- Select Last Qualification field -->
+                <div class="col-md-12 col-lg-6"> <label for="last-qualification" class="form-label">Last Qualification
+                        <span class="mandatory">*</span></label>
+                    <select id="last-qualification" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option selected>Last qualification</option>
+                        <option value="matriculation">Matriculation</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <!-- Where did you hear about us? -->
+                <div class="col-12"> <label for="hear-about-us" class="form-label">Where did you hear about us? <span
+                            class="mandatory">*</span></label>
+                    <select id="hear-about-us" class="form-select form-select-md p-3 mb-3"
+                        aria-label="Default select example">
+                        <option selected>Where did you hear about us?</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Youtube">Youtube</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="Google-Search">Google Search</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                    </select>
+                </div>
             </div>
-            <!-- select city    -->
-            <div class="col-md-12 col-lg-6"> <label for="select-city" class="form-label">Select City <span
-                        class="mandatory">*</span></label>
-                <select id="select-city" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select City</option>
-                    <option value="islamabad">Islamabad</option>
-                    <option value="karachi">Karachi</option>
-                    <option value="lahore">Lahore</option>
-                </select>
+            <!-- radio button -->
+            <div class="form-check form-check-inline">
+                <div class="question mx-0">Do you have a Laptop?<span class="mandatory">*</span></div>
+                <input class="form-check-input" type="radio" name="havlaptop" id="havlaptop" value="Yes">
+                <label class="form-check-label" for="inlineRadio1">Yes</label>
             </div>
-            <!-- Select Course field -->
-            <div class="col-md-12 col-lg-6"> <label for="select-course" class="form-label">Select Course <span
-                        class="mandatory">*</span></label>
-                <select id="select-course" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select course</option>
-                    <option value="webandapp">Web and App Development</option>
-                    <option value="dataanalytics">Data Analytics</option>
-                    <option value="digitalmarketing">Digital Marketing</option>
-                </select>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="havlaptop" id="havlaptop" value="No">
+                <label class="form-check-label" for="no">No</label>
             </div>
-            <!-- Select Campus -->
-            <div class="col-md-12 col-lg-6"> <label for="select-campus" class="form-label">Select Campus <span
-                        class="mandatory">*</span></label>
-                <select id="select-campus" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select campus</option>
-                    <option value="Alyabad">Alyabad</option>
-                    <option value="HajyaniSakeena">Hajyani Sakeena</option>
-                    <option value="Paposh">Paposh</option>
-                </select>
-            </div>
-        </div>
-    </section>
-    <!-- location and course details section ends here -->
-    <!-- Personal Information section starts here -->
-    <section class="container">
-        <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-info"><svg xmlns="http://www.w3.org/2000/svg"
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user w-5 h-5" aria-hidden="true"
-                    style="color:#0B73B7">
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg></span><span>Personal Information</span></h3>
-        <div class="row">
-            <!-- Full Name field -->
-            <div class="col-md-12 col-lg-6"> <label for="full-name" class="form-label">Full Name <span
-                        class="mandatory">*</span></label>
-                <input type="text" class="form-control form-control-md p-3 mb-3" id="full-name"
-                    placeholder="Enter your full name">
-            </div>
-            <!-- Father Name field -->
-            <div class="col-md-12 col-lg-6"> <label for="Father-name" class="form-label">Father Name <span
-                        class="mandatory">*</span></label>
-                <input type="text" class="form-control form-control-md p-3 mb-3" id="Father-name"
-                    placeholder="Enter Father's name">
-            </div>
-            <!-- date of birth field -->
-            <div class="col-md-12 col-lg-6"> <label for="dob" class="form-label">Date of Birth <span
-                        class="mandatory">*</span></label>
-                <input type="date" class="form-control form-control-md p-3 mb-3" id="dob">
-            </div>
-            <!-- Email field -->
-            <div class="col-md-12 col-lg-6"> <label for="email" class="form-label">Email <span
-                        class="mandatory">*</span></label>
-                <input type="email" class="form-control form-control-md p-3 mb-3" id="email"
-                    placeholder="your.email@example.com">
-            </div>
-            <!-- Phone Number field -->
-            <div class="col-md-12 col-lg-6"> <label for="phone-number" class="form-label">Phone Number <span
-                        class="mandatory">*</span></label>
-                <input type="tel" class="form-control form-control-md p-3 mb-3" id="phone-number"
-                    placeholder="Enter phone number">
-            </div>
-            <!-- Father'sPhone Number field -->
-            <div class="col-md-12 col-lg-6"> <label for="Fphone-number" class="form-label">Father's Phone <span
-                        class="mandatory">*</span></label>
-                <input type="tel" class="form-control form-control-md p-3 mb-3" id="Fphone-number"
-                    placeholder="Enter phone number">
-            </div>
-            <!-- ID Number field -->
-            <div class="col-md-12 col-lg-6"> <label for="ID-No" class="form-label">ID Number <span
-                        class="mandatory">*</span></label>
-                <input type="text" class="form-control form-control-md p-3 mb-3" id="ID-No"
-                    placeholder="Enter ID number">
-            </div>
-            <!-- Father's ID Number field -->
-            <div class="col-md-12 col-lg-6"> <label for="FID-No" class="form-label">Father's ID Number <span
-                        class="mandatory">*</span></label>
-                <input type="text" class="form-control form-control-md p-3 mb-3" id="FID-No"
-                    placeholder="Enter  ID number">
-            </div>
-            <!-- address field -->
-            <div class="col-12"> <label for="address" class="form-label">Address <span
-                        class="mandatory">*</span></label>
-                <input type="text" class="form-control form-control-md pb-5 mb-3" id="address"
-                    placeholder="Enter your complete address (Minimum 10 characters)">
-            </div>
-        </div>
-    </section>
-    <!-- Personal Information section ends here -->
-    <!-- Education & Technical Details section starts here -->
-    <section class="container">
-        <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-education"><svg class="bg-transparent"
-                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-graduation-cap w-3 h-3 sm:w-4 sm:h-4" aria-hidden="true">
-                    <path
-                        d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z">
-                    </path>
-                    <path d="M22 10v6"></path>
-                    <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
-                </svg></span><span>Education & Technical Details</span></h3>
-        <div class="row">
-            <!-- Select Computer Proficiency -->
-            <div class="col-md-12 col-lg-6"> <label for="computer-proficiency" class="form-label">Computer Proficiency
-                    <span class="mandatory">*</span></label>
-                <select id="computer-proficiency" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Select your Computer Proficiency</option>
-                    <option value="beginner">Beginner</option>
-                    <option value="intermediate">Intermediate</option>
-                    <option value="advanced">Advanced</option>
-                    <option value="expert">Expert</option>
-                </select>
-            </div>
-            <!-- Select Last Qualification field -->
-            <div class="col-md-12 col-lg-6"> <label for="last-qualification" class="form-label">Last Qualification
-                    <span class="mandatory">*</span></label>
-                <select id="last-qualification" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Last qualification</option>
-                    <option value="matriculation">Matriculation</option>
-                    <option value="Undergraduate">Undergraduate</option>
-                    <option value="bachelor">Bachelor's Degree</option>
-                    <option value="master">Master's Degree</option>
-                    <option value="Other">Other</option>
-                </select>
-            </div>
-            <!-- Where did you hear about us? -->
-            <div class="col-12"> <label for="hear-about-us" class="form-label">Where did you hear about us? <span
-                        class="mandatory">*</span></label>
-                <select id="hear-about-us" class="form-select form-select-md p-3 mb-3" aria-label="Default select example">
-                    <option selected>Where did you hear about us?</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Instagram">Instagram</option>
-                    <option value="Youtube">Youtube</option>
-                    <option value="TikTok">TikTok</option>
-                    <option value="Google-Search">Google Search</option>
-                    <option value="WhatsApp">WhatsApp</option>
-                </select>
-            </div>
-        </div>
-        <!-- radio button -->
-        <div class="form-check form-check-inline">
-            <div class="question mx-0">Do you have a Laptop?<span class="mandatory">*</span></div>
-            <input class="form-check-input" type="radio" name="havlaptop" id="havlaptop" value="Yes">
-            <label class="form-check-label" for="inlineRadio1">Yes</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="havlaptop" id="havlaptop" value="No">
-            <label class="form-check-label" for="no">No</label>
-        </div>
-        <!-- Education & Technical Details section ends here -->
+            <!-- Education & Technical Details section ends here -->
         </section>
         <!-- upload photo -->
         <section class="container">
@@ -359,9 +384,9 @@
                     </ol>
                 </div>
             </div>
-            </section>
-            <!-- Terms and Conditions -->
-             <div class="container">
+        </section>
+        <!-- Terms and Conditions -->
+        <div class="container">
             <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-education"><svg
                         xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide
@@ -370,204 +395,205 @@
                             d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
                         </path>
                     </svg></span><span>Terms and Conditions</span></h3>
-                    </div>
-            <section class="container terms">
-                <div class="conditions">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check1">
-                        <label class="form-check-label" for="check1">
-                            I hereby solemnly declare that all information provided in this application is true and
-                            accurate to the best of my knowledge. Furthermore, I agree to abide by all current and
-                            future rules, regulations, and policies established by SMIT.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check2" checked>
-                        <label class="form-check-label" for="check2">
-                            I accept the responsibility to maintain good conduct throughout the program and commit to
-                            focusing solely on learning. I will not engage in any political, unethical, or unrelated
-                            activities during my enrollment. Any violation may result in immediate cancellation of my
-                            admission.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check3" checked>
-                        <label class="form-check-label" for="check3">
-                            Upon completion of the course, I agree to successfully complete any project assigned by SMIT
-                            as part of the program requirements.
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="check4" checked>
-                        <label class="form-check-label" for="check4">
-                            Female students are required to wear an abaya or hijab while attending classes.
-                        </label>
-                    </div>
+        </div>
+        <section class="container terms">
+            <div class="conditions">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check1">
+                    <label class="form-check-label" for="check1">
+                        I hereby solemnly declare that all information provided in this application is true and
+                        accurate to the best of my knowledge. Furthermore, I agree to abide by all current and
+                        future rules, regulations, and policies established by SMIT.
+                    </label>
                 </div>
-                <div class="policy-div">By submitting this form, you agree to our <span>Privacy Policy</span> and
-                    <span>Terms of Service</span>.
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check2" checked>
+                    <label class="form-check-label" for="check2">
+                        I accept the responsibility to maintain good conduct throughout the program and commit to
+                        focusing solely on learning. I will not engage in any political, unethical, or unrelated
+                        activities during my enrollment. Any violation may result in immediate cancellation of my
+                        admission.
+                    </label>
                 </div>
-            </section>
-            <section class="container notice">
-                <h5 class="d-flex align-item-center gap-2 py-4"><span><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round"
-                            class="lucide lucide-circle-alert w-5 h-5 flex-shrink-0 mt-0.5" aria-hidden="true"
-                            style="color: rgb(11, 115, 183);">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" x2="12" y1="8" y2="12"></line>
-                            <line x1="12" x2="12.01" y1="16" y2="16"></line>
-                        </svg></span>Important Notice:</h5>
-                <div class="text-notice">Please ensure all information provided is accurate. Incomplete or false
-                    information may result in rejection of your application.</div>
-            </section>
-            <section class="container">
-                <button class="btn-submit btn btn-primary" type="submit"><span><svg class="btn-svg" xmlns="http://www.w3.org/2000/svg" width="24"
-                            height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text w-6 h-6"
-                            aria-hidden="true">
-                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-                            <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                            <path d="M10 9H8"></path>
-                            <path d="M16 13H8"></path>
-                            <path d="M16 17H8"></path>
-                        </svg></span><span>Submit Registration</span></button>
-
-            </section>
-            </form>
-        <!-- footer starts here -->
-         <div class="footer-bcakg">
-            <footer class="container py-5 my-5 border-top">
-                <div class="footer-row row row-cols-1 row-cols-sm-2 row-cols-md-5">
-
-                    <div class="footer-row col col-lg-4 mb-3">
-                        <a href="./index.html"
-                            class="fw-bold fs-4 d-flex align-items-center mb-3 link-body-emphasis text-decoration-none footer-row">
-                            <img class="footer-row" src="./Asset/transparent_logo.png" alt="SMIT logo" width="80"
-                                height="40"><img class="footer-row" src="./Asset/saylani_logo.webp" alt="logo02"
-                                width="120" height="40">
-                        </a>
-
-                        <p class="text-body-white footer-row">
-                            Empowering Pakistan's youth with world-class IT education and training programs to build a
-                            brighter digital future.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-map-pin w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5"
-                                    aria-hidden="true" style="color:#0B73B7">
-                                    <path
-                                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
-                                    </path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg><span class="text-xs sm:text-sm" style="color:#9ca3af">A-25, Bahadurabad
-                                    Chowrangi,
-                                    Karachi, Pakistan</span></div>
-                            <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-phone w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" aria-hidden="true"
-                                    style="color:#6da800">
-                                    <path
-                                        d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
-                                    </path>
-                                </svg><a class="text-xs sm:text-sm hover:text-white transition-colors"
-                                    style="color:#9ca3af;font-family:&quot;Montserrat&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif"
-                                    href="tel:+922134161365">+92 21 111 729 526</a></div>
-                            <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                    class="lucide lucide-mail w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" aria-hidden="true"
-                                    style="color:#0B73B7">
-                                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
-                                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                </svg><a class="text-xs sm:text-sm hover:text-white transition-colors"
-                                    style="color:#9ca3af;font-family:&quot;Montserrat&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif"
-                                    href="mailto:saylanimass@gmail.com">saylanimass@gmail.com</a></div>
-                        </div>
-
-
-                    </div>
-
-                    <div class="footer-row col mb-3">
-                        <h5 class="footer-row">Quick Links</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Chat Us</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Enroll Now</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Download ID Card</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Entry Test Status</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Check Result</a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-row col mb-3">
-                        <h5>Our Courses</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Web Development</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Agentic AI</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">AI & Data Science</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Graphic Design</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">3D Animation</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-row col mb-3">
-                        <h5>Resources</h5>
-                        <ul class="nav flex-column">
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Courses</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Campuses</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check3" checked>
+                    <label class="form-check-label" for="check3">
+                        Upon completion of the course, I agree to successfully complete any project assigned by SMIT
+                        as part of the program requirements.
+                    </label>
                 </div>
-            </footer>
-            <div class="endnotes">
-                <p>© 2013 - 2026 <span> Saylani Mass IT Training.</span> All rights reserved.</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="check4" checked>
+                    <label class="form-check-label" for="check4">
+                        Female students are required to wear an abaya or hijab while attending classes.
+                    </label>
+                </div>
             </div>
-</div>
+            <div class="policy-div">By submitting this form, you agree to our <span>Privacy Policy</span> and
+                <span>Terms of Service</span>.
+            </div>
+        </section>
+        <section class="container notice">
+            <h5 class="d-flex align-item-center gap-2 py-4"><span><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-circle-alert w-5 h-5 flex-shrink-0 mt-0.5" aria-hidden="true"
+                        style="color: rgb(11, 115, 183);">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" x2="12" y1="8" y2="12"></line>
+                        <line x1="12" x2="12.01" y1="16" y2="16"></line>
+                    </svg></span>Important Notice:</h5>
+            <div class="text-notice">Please ensure all information provided is accurate. Incomplete or false
+                information may result in rejection of your application.</div>
+        </section>
+        <section class="container">
+            <button class="btn-submit btn btn-primary" type="submit"><span><svg class="btn-svg"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-file-text w-6 h-6" aria-hidden="true">
+                        <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                        <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                        <path d="M10 9H8"></path>
+                        <path d="M16 13H8"></path>
+                        <path d="M16 17H8"></path>
+                    </svg></span><span>Submit Registration</span></button>
 
-        <!-- footer ends here -->
+        </section>
+    </form>
+    <!-- footer starts here -->
+    <div class="footer-bcakg">
+        <footer class="container py-5 my-5 border-top">
+            <div class="footer-row row row-cols-1 row-cols-sm-2 row-cols-md-5">
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
-        <script src="./script.js"></script>
+                <div class="footer-row col col-lg-4 mb-3">
+                    <a href="./index.html"
+                        class="fw-bold fs-4 d-flex align-items-center mb-3 link-body-emphasis text-decoration-none footer-row">
+                        <img class="footer-row" src="./Asset/transparent_logo.png" alt="SMIT logo" width="80"
+                            height="40"><img class="footer-row" src="./Asset/saylani_logo.webp" alt="logo02" width="120"
+                            height="40">
+                    </a>
+
+                    <p class="text-body-white footer-row">
+                        Empowering Pakistan's youth with world-class IT education and training programs to build a
+                        brighter digital future.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-start gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-map-pin w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 mt-0.5"
+                                aria-hidden="true" style="color:#0B73B7">
+                                <path
+                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                                </path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg><span class="text-xs sm:text-sm" style="color:#9ca3af">A-25, Bahadurabad
+                                Chowrangi,
+                                Karachi, Pakistan</span></div>
+                        <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-phone w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" aria-hidden="true"
+                                style="color:#6da800">
+                                <path
+                                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                                </path>
+                            </svg><a class="text-xs sm:text-sm hover:text-white transition-colors"
+                                style="color:#9ca3af;font-family:&quot;Montserrat&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif"
+                                href="tel:+922134161365">+92 21 111 729 526</a></div>
+                        <div class="flex items-center gap-3 text-sm"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"
+                                class="lucide lucide-mail w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" aria-hidden="true"
+                                style="color:#0B73B7">
+                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            </svg><a class="text-xs sm:text-sm hover:text-white transition-colors"
+                                style="color:#9ca3af;font-family:&quot;Montserrat&quot;, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, sans-serif"
+                                href="mailto:saylanimass@gmail.com">saylanimass@gmail.com</a></div>
+                    </div>
+
+
+                </div>
+
+                <div class="footer-row col mb-3">
+                    <h5 class="footer-row">Quick Links</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Chat Us</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Enroll Now</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Download ID Card</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Entry Test Status</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Check Result</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-row col mb-3">
+                    <h5>Our Courses</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Web Development</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Agentic AI</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">AI & Data Science</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Graphic Design</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">3D Animation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-row col mb-3">
+                    <h5>Resources</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Courses</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Campuses</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item mb-2">
+                            <a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="endnotes">
+            <p>© 2013 - 2026 <span class="smit fw-bold"> Saylani Mass IT Training.</span> All rights reserved.</p>
+        </div>
+        </footer>
+    <!-- footer ends here -->
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

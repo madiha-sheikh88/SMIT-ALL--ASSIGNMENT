@@ -301,7 +301,42 @@ form.addEventListener('submit', function (event) {
  
     // ---------------- Final step ----------------
     if (isFormValid) {
-        alert(Your form is submitted successfully!)
+        alert("Your form is submitted successfully!");
         form.submit();
     }
+
+});
+
+function unlockNext(current, next) {
+    if (current.value !== "") {
+        next.disabled = false;
+    } else {
+        next.disabled = true;
+    }
+}
+const country = document.getElementById("country");
+const classPreference = document.getElementById("class-preference");
+const gender = document.getElementById("select-gender");
+const city = document.getElementById("select-city");
+const course = document.getElementById("select-course");
+const campus = document.getElementById("select-campus");
+
+country.addEventListener("change", () => {
+    unlockNext(country, classPreference);
+});
+
+classPreference.addEventListener("change", () => {
+    unlockNext(classPreference, gender);
+});
+
+gender.addEventListener("change", () => {
+    unlockNext(gender, city);
+});
+
+city.addEventListener("change", () => {
+    unlockNext(city, course);
+});
+
+course.addEventListener("change", () => {
+    unlockNext(course, campus);
 });
