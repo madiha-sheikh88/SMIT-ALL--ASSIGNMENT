@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+  /* Adjust the pixels based on your actual navbar height */
+  padding-top: 70px; 
+}
+/* Base styles for smooth transition */
+.navbar {
+  transition: all 0.4s ease-in-out;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px); /* Modern frosted-glass effect */
+  border-bottom: 1px solid transparent;
+}
+
+/* Styles applied via JavaScript when page scrolls */
+.navbar.scrolled {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* Ensure the brand image scales down smoothly too */
+.navbar-brand img {
+  transition: transform 0.4s ease;
+}
+.navbar.scrolled .navbar-brand img {
+  transform: scale(0.9);
+}
+
+
+
+@keyframes decorativePulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(184, 142, 47, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(184, 142, 47, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(184, 142, 47, 0); }
+}
+
+#cart-icon {
+  background-color: #b88e2f;
+  animation: decorativePulse 2s infinite;
+}
+
+  @keyframes morph {
+  0% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; }
+  50% { border-radius: 60% 40% 40% 60% / 50% 60% 40% 50%; }
+  100% { border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; }
+}
+
+@keyframes heartThump {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.25); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.25); }
+  70% { transform: scale(1); }
+}
+
+.list-unstyled li:nth-child(3):hover img { /* Targets the heart icon */
+  animation: heartThump 0.8s ease-in-out;
+}
+
+/* 1. Base Styling for Menu Links */
+.navbar-nav .nav-item {
+  position: relative;
+  padding: 0 5px;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Poppins', 'Montserrat', sans-serif; /* Clean, premium fonts */
+  font-size: 16px;
+  font-weight: 500;
+  color: #333333 !important; /* Elegant dark grey instead of harsh black */
+  letter-spacing: 0.5px;
+  text-transform: uppercase; /* Fashion e-commerce standard */
+  transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
+}
+
+/* 2. Advanced Decorative Hover Effects */
+.navbar-nav .nav-link:hover {
+  color: #b88e2f !important; /* Premium gold accent color */
+  letter-spacing: 1.5px;      /* Subtle typographic expansion */
+  transform: translateY(-1px); /* Delicate upward lift */
+}
+
+/* 3. Center-Out Underline Animation */
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #b88e2f;
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.navbar-nav .nav-link:hover::after {
+  transform: scaleX(0.7); /* Underline expands to 70% width for a sophisticated look */
+}
+
+/* 4. Active Page Styling (e.g., when you are on shop.html) */
+.navbar-nav .nav-link.active {
+  color: #b88e2f !important;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link.active::after {
+  transform: scaleX(0.7); /* Keeps line visible for the current page */
+  background-color: #333333; /* Contrast color for active state */
+}
+
+#cart-icon {
+    position: relative;
+    display: flex;
+    font-size: 30px;
+    cursor: pointer;
+}
+.cart-item-count {
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    width: 20px;
+    height: 20px;
+    background-color: #333333;
+    color: #eaeaea;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

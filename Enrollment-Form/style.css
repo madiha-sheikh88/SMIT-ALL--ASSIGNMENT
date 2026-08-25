@@ -4,7 +4,7 @@
     --blueColor: #0b73b7;
     --greenColor: #93be54;
     --blackColor: #000;
-    --grayColor: #7A8791;
+    --grayColor: #9ca3af;
 }
 *{
     margin: 0;
@@ -229,11 +229,35 @@ footer , .footer-row{
 }
 footer * {
         background-color: transparent;
-    color: var(--mainColor);
 }
-footer li{
-    color: var(--grayColor);
-    font-weight: 500;
+footer .nav-link.text-body-secondary{
+    color: var(--grayColor) !important;
+}
+footer h5.footer-heading {
+    display: inline-block;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to right, #0B73B7, #6da800) 1;
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+}
+.social-svg {
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px; 
+    background-color: rgb(26, 25, 25);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.social-svg:hover {
+    background: linear-gradient(to right, #0B73B7, #6da800);
+}
+.social-svg svg {
+    stroke: #ffffff !important;
+    transition: color 0.3s ease-in-out;
 }
 
 /* sticky position chatbot */
