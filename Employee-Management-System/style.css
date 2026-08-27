@@ -18,6 +18,14 @@
     background-attachment: fixed;
     min-height: 100vh;
 }
+.form-signin {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
 h1.text-center , h2.text-center {
   color: #ffffff;
   font-weight: 700;
@@ -25,6 +33,23 @@ h1.text-center , h2.text-center {
     0 2px 4px rgba(0, 0, 0, 0.7), 
     0 4px 16px rgba(15, 23, 42, 0.6); 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* dashbboard page css */
 
@@ -104,6 +129,7 @@ h1.text-center , h2.text-center {
     background-color: #212529; /* matches your dark sidebar */
     color: #fff;
     border: none;
+    text-decoration: none;
     padding: 10px 24px;
     font-size: 15px;
     font-weight: 600;
@@ -124,6 +150,32 @@ h1.text-center , h2.text-center {
     transform: translateY(0);
     box-shadow: none;
 }
+@media (max-width: 480px) {
+  .btn-review,
+  .btn-add-employee {
+    width: 100% !important;
+  }
+  .all-btn{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* search section css  */
+@media (max-width: 991.98px) {
+        .search-form {
+            flex-direction: column;
+        }
+
+        .search-form .form-control {
+            width: 100%;
+            margin-right: 0 !important;
+            margin-bottom: 0.5rem;
+        }
+
+        .search-form .btn {
+            width: 100%;
+        }
+    }
 
 /* dashboard showing:Total Employees, Active Employees, Inactive Employees, Total Departments */
 .stat-card {
@@ -278,4 +330,78 @@ h1.text-center , h2.text-center {
     .employee-table tbody td {
         padding: 10px 12px;
     }
+}
+ /* form page css */
+
+.container {
+background-color: 
+#0d6efd;
+border-radius: 16px;
+padding: 24px;
+box-shadow: 0 4px 20px rgba(0, 61, 128, 0.08);
+border: 1px solid 
+#e0edfd;
+border-left: 4px solid #0a0f1c;
+}
+
+/* buttons of forms */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-cancel {
+  background-color: transparent;
+  color: #0a0f1c;
+  border: 1.5px solid #0a0f1c;
+}
+
+.btn-cancel:hover {
+  background-color: #0a0f1c;
+  color: #ffffff;
+}
+
+.btn-save {
+   background-color: #212529; /* matches your dark sidebar */
+    color: #fff;
+    border: none;
+    padding: 10px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-save:hover {
+  background-color: #000;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    transform: translateY(-2px);
+}
+.btn-save:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+@media (max-width: 480px) {
+  .button-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+  }
 }
