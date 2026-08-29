@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add to Cart</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Cart</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <header>
-        <!-- navbar starts here -->
+  <header>
+    <!-- navbar starts here -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div class="container">
-        <a class="navbar-brand fs-2 fw-bold" href="#"><img src="./Asset/Logos-furniro.png"
-            alt="Women Clothing">Women Clothing</a>
+        <a class="navbar-brand fs-2 fw-bold" href="#"><img src="./Asset/Logos-furniro.png" alt="Women Clothing">Women
+          Clothing</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -39,14 +41,264 @@
             <li><img src="./Asset/svg-nav-login.svg" alt="login"></li>
             <li><img src="./Asset/svg-nav-search.svg" alt="search"></li>
             <li><img src="./Asset/svg-nav-heart.svg" alt="heart"></li>
-            <li id="cart-icon"><a href="./checkout.html"><img src="./Asset/svg-nav-cart.svg " alt="cart"></a>
-            <span class="cart-item-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none; font-size: 10px;">0</span></li>
+            <li id="cart-icon" onclick="toggleCart()" style="cursor:pointer;">
+              <img src="./Asset/svg-nav-cart.svg" alt="cart">
+              <span
+                class="cart-item-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
-    </header>
+  </header>
+<!-- ============ OVERLAY ============ -->
+ <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
 
-    <script src="./script.js"></script>
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-panel-header">
+      <h5>Your Cart</h5>
+      <button class="cart-close-btn" onclick="toggleCart()">&times;</button>
+    </div>
+
+    <div class="cart-panel-body" id="cart-items-container">
+      <!-- Cart items render here via JS -->
+    </div>
+
+    <div class="cart-panel-footer">
+      <div class="cart-summary">
+        <h6>Total</h6>
+        <h6 id="cart-total">Rs. 0</h6>
+      </div>
+      <button class="checkout-btn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+
+  <!-- hero section starts here -->
+  <section class="container">
+    <div class="row flex-lg-row-reverse align-items-center g-3 py-3 py-md-3 py-lg- mt-2 rounded"
+      style="background: linear-gradient(to right, #c1dee8, #fbd9b9)">
+      <div class="col-md-12 col-lg-6 ">
+        <img src="./asset/hero-pic.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+          height="500" loading="lazy" />
+      </div>
+      <div class="col-md-12 col-lg-6 p-sm-2 px-lg-5">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+          Discover and Find Your Own Fashion!
+        </h1>
+        <p class="lead">
+          Explore our curated collection of stylish clothing and accessories tailored to your unique taste.
+        </p>
+      </div>
+      <!-- hero section ends -->
+  </section>
+  <!-- Product section starts here -->
+  <section class="container">
+    <h3 class="text-center my-5">Our Products</h3>
+    <!-- card 1 -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+      <div class="col">
+          <div class="card h-100">
+            <img src="./asset/000000HB1709_2.webp" class="card-img-top" alt="card-image">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-30%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Purse</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 5000</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 2 -->
+      <div class="col">
+          <div class="card h-100">
+            <img src="./asset/003PBEW25V62_999_2.webp" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Yellow 2 piece</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 3500</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 3 -->
+      <div class="col">
+          <div class="card h-100">
+            <img src="./asset/2STER25V514U_999_2.webp" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Blue 2 piece</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 2000</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 4 -->
+      <div class="col">
+         
+          <div class="card h-100">
+            <img src="./asset/3PEDY25V93TS_1.jpg" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Purple 3 piece</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 7500</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 5 -->
+      <div class="col">
+          <div class="card h-100">
+            <img src="./asset/3PELRXW25V55_999_3.webp" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Black 3 piece</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 5200</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 6 -->
+      <div class="col">
+          <div class="card h-100">
+            <img src="./asset/F0180201801_4.webp" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Brown Jacket</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 8030</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 7 -->
+      <div class="col">
+          <div class="card h-100">
+            <img src="./asset/F0275201901_cbdfb70e-fd62-4603-bb28-33f27c0c1470.webp" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Black Coat</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 6500</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+      <!-- card 8 -->
+      <div class="col">
+         
+          <div class="card h-100">
+            <img src="./asset/F1425206901_6a706cff-1711-4151-abe4-9d4a77fd5e17.webp" class="card-img-top" alt="Luxury sofa">
+            <div class="position-absolute rounded-circle top-0 end-0 bg-danger text-white py-3 px-2">-50%</div>
+            <div class="card-body" style="background-color: var(--lightBackground);">
+              <h5 class="card-title">Brown Pant</h5>
+            <p class=" d-flex align-item-center justify-content-between gap-3"><span>Rs. 4500</span><span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <path
+                      d="M3.977 9.84A2 2 0 0 1 5.971 8h12.058a2 2 0 0 1 1.994 1.84l.803 10A2 2 0 0 1 18.833 22H5.167a2 2 0 0 1-1.993-2.16z" />
+                    <path d="M16 11V6a4 4 0 0 0-4-4v0a4 4 0 0 0-4 4v5" />
+                  </g>
+                </svg></span>
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-light my-3 px-5"
+        style="border: 2px solid var(--yellowColor); color: var(--yellowColor);">Show More</button>
+    </div>
+  </section>
+  <!-- footer section starts here -->
+  <section class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+      <div class="col mb-3"> <a href="./index.html"
+          class="fw-bold fs-4 d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+          aria-label="Bootstrap">Women Clothing</a>
+        <p class="text-body-secondary">400 University Drive Suite 200 Coral Gables, FL 33134 USA</p>
+      </div>
+      <div class="col mb-3">
+        <h5>Links</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="./index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+          <li class="nav-item mb-2"><a href="./shop.html" class="nav-link p-0 text-body-secondary">Shop</a></li>
+          <li class="nav-item mb-2"><a href="./Blog.html" class="nav-link p-0 text-body-secondary">Blog</a></li>
+          <li class="nav-item mb-2"><a href="./contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+          <li class="nav-item mb-2"><a href="./checkout.html" class="nav-link p-0 text-body-secondary">Checkout</a></li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+        <h5>Help</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payment Options</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Returns</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policies</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1"
+              class="visually-hidden">Email address</label> <input id="newsletter1" type="email"
+              class="form-control border-bottom border-none" placeholder="Enter Your Email Address"> <button
+              class="btn text-uppercase border-bottom" type="button">Subscribe</button> </div>
+        </form>
+      </div>
+
+      </div>
+    </footer>
+  </section>
+  <!-- footer section ends here -->
+
+  <script src="./script.js"></script>
 </body>
+
 </html>

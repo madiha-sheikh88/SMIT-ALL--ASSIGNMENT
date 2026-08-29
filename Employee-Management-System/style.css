@@ -405,3 +405,63 @@ border-left: 4px solid #0a0f1c;
     width: 100%;
   }
 }
+
+
+/* to make the sidebar side by side on every screen */
+.main-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: stretch;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 25%;
+    min-width: 250px;
+    max-width: 400px;
+    flex-shrink: 0;
+}
+
+/* Inner sidebar */
+.sidebar-inner {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    min-width: 0;
+    width: 75%;
+}
+
+/* Desktop - make sidebar grow with screen */
+@media (min-width: 768px) {
+    .sidebar {
+        width: 25%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .main-container {
+        display: block;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-width: 100%;
+        max-width: none;
+    }
+
+    .sidebar-inner {
+        min-height: auto;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}
