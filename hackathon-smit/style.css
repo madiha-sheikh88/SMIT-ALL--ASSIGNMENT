@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
 
 
+
 :root {
     --primary: #635bff;
     --primary-dark: #5048dc;
@@ -15,7 +16,6 @@
     --success: #16a34a;
     --warning: #f59e0b;
     --danger: #ef4444;
-
     --shadow:
         0 15px 45px rgba(23, 25, 39, 0.08);
 
@@ -526,6 +526,13 @@ a {
     font-size: 75px;
     color: var(--primary);
 }
+.provider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 
 
 .provider-content {
@@ -1024,7 +1031,13 @@ footer {
     font-size: 130px;
     color: var(--primary);
 }
-
+.detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
 
 .detail-content {
     padding: 45px;
@@ -1570,4 +1583,4 @@ body.dark-mode .table {
         padding: 25px;
     }
 
-}
+} 

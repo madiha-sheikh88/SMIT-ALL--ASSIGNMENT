@@ -9,7 +9,7 @@ const providers = [
         experience: "8 years",
         location: "Gulshan, Karachi",
         price: 2500,
-        icon: "bi-lightning",
+        image: "./asset/electrician.png",
         about:
             "Professional electrician specializing in residential wiring, electrical repairs and installations.",
         availability: "Available today"
@@ -24,7 +24,7 @@ const providers = [
         experience: "7 years",
         location: "North Nazimabad, Karachi",
         price: 2000,
-        icon: "bi-droplet",
+        image: "./asset/plumber.avif",
         about:
             "Experienced plumber offering pipe repairs, bathroom fittings and water system maintenance.",
         availability: "Available tomorrow"
@@ -39,7 +39,7 @@ const providers = [
         experience: "6 years",
         location: "DHA, Karachi",
         price: 3500,
-        icon: "bi-scissors",
+        image: "./asset/female-beautician.webp",
         about:
             "Professional beauty specialist providing makeup, hairstyling and home salon services.",
         availability: "Available today"
@@ -54,7 +54,7 @@ const providers = [
         experience: "9 years",
         location: "PECHS, Karachi",
         price: 3000,
-        icon: "bi-snow",
+        image: "./asset/ac-repair.jfif",
         about:
             "AC repair specialist experienced in maintenance, gas refilling and troubleshooting.",
         availability: "Available today"
@@ -69,7 +69,7 @@ const providers = [
         experience: "5 years",
         location: "Clifton, Karachi",
         price: 1800,
-        icon: "bi-stars",
+        image: "./asset/Cleaners.jpg",
         about:
             "Reliable home cleaning professional offering deep cleaning and regular home maintenance.",
         availability: "Available tomorrow"
@@ -84,7 +84,7 @@ const providers = [
         experience: "6 years",
         location: "Johar, Karachi",
         price: 2500,
-        icon: "bi-book",
+        image: "./asset/tutor.jfif",
         about:
             "Experienced mathematics tutor helping students understand difficult concepts with ease.",
         availability: "Available today"
@@ -182,7 +182,7 @@ function createProviderCard(provider) {
 
                 <div class="provider-image">
 
-                    <i class="bi ${provider.icon}"></i>
+                    <img src="${provider.image}" class="provider-img" alt="${provider.name}">
 
                 </div>
 
@@ -422,7 +422,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     <div class="detail-image">
 
-                        <i class="bi ${provider.icon}"></i>
+                        <img src="${provider.image}" alt="${provider.name}">
 
                     </div>
 
