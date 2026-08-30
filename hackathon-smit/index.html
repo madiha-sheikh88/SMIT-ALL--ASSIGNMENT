@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ServiceHub | Find Trusted Professionals</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    >
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand fw-bold" href="index.html">
+            <span class="logo-icon">
+                <i class="bi bi-tools"></i>
+            </span>
+            Service<span>Hub</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="customer-dashboard.html">
+                        My Bookings
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="provider-dashboard.html">
+                        Provider
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="theme-btn" id="themeToggle">
+                    <i class="bi bi-moon"></i>
+                </button>
+
+                <a href="login.html" class="btn btn-outline-primary">
+                    Login
+                </a>
+
+                <a href="register.html" class="btn btn-primary">
+                    Get Started
+                </a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+                    <i class="bi bi-stars"></i>
+                    Trusted local professionals
+                </span>
+
+                <h1>
+                    Find the right
+                    <span>professional</span>
+                    for the job.
+                </h1>
+
+                <p>
+                    From home repairs to beauty, cleaning and tutoring,
+                    ServiceHub connects you with trusted professionals
+                    in your area.
+                </p>
+
+                <div class="hero-search">
+
+                    <div class="search-field">
+                        <i class="bi bi-search"></i>
+                        <input
+                            type="text"
+                            id="homeSearch"
+                            placeholder="What service do you need?"
+                        >
+                    </div>
+
+                    <div class="search-field">
+                        <i class="bi bi-geo-alt"></i>
+                        <input
+                            type="text"
+                            placeholder="Location"
+                        >
+                    </div>
+
+                    <button
+                        class="btn btn-primary search-btn"
+                        onclick="searchServices()"
+                    >
+                        Search
+                    </button>
+
+                </div>
+
+                <div class="trust-row">
+                    <span>
+                        <i class="bi bi-check-circle-fill"></i>
+                        Verified professionals
+                    </span>
+
+                    <span>
+                        <i class="bi bi-star-fill"></i>
+                        Highly rated
+                    </span>
+
+                    <span>
+                        <i class="bi bi-shield-check"></i>
+                        Secure booking
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <div class="hero-image-wrapper">
+
+                    <div class="hero-card floating-card">
+                        <i class="bi bi-check-circle-fill"></i>
+
+                        <div>
+                            <strong>Booking Accepted</strong>
+                            <small>Ahmed is on the way</small>
+                        </div>
+                    </div>
+
+                    <div class="hero-illustration">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <div class="hero-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <strong>4.9</strong>
+                        <span>2,500+ reviews</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CATEGORIES -->
+<section class="section">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">EXPLORE</span>
+                <h2>Popular services</h2>
+            </div>
+
+            <a href="services.html" class="view-link">
+                View all <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="category-grid">
+
+            <a href="services.html?category=Cleaning" class="category-card">
+                <div class="category-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+                <h5>Cleaning</h5>
+                <p>120+ providers</p>
+            </a>
+
+            <a href="services.html?category=Plumber" class="category-card">
+                <div class="category-icon">
+                    <i class="bi bi-droplet"></i>
+                </div>
+                <h5>Plumbing</h5>
+                <p>85+ providers</p>
+            </a>
+
+            <a href="services.html?category=Electrician" class="category-card">
+                <div class="category-icon">
+                    <i class="bi bi-lightning"></i>
+                </div>
+                <h5>Electrician</h5>
+                <p>95+ providers</p>
+            </a>
+
+            <a href="services.html?category=Beauty" class="category-card">
+                <div class="category-icon">
+                    <i class="bi bi-scissors"></i>
+                </div>
+                <h5>Beauty</h5>
+                <p>75+ providers</p>
+            </a>
+
+            <a href="services.html?category=AC Repair" class="category-card">
+                <div class="category-icon">
+                    <i class="bi bi-snow"></i>
+                </div>
+                <h5>AC Repair</h5>
+                <p>60+ providers</p>
+            </a>
+
+            <a href="services.html?category=Tutor" class="category-card">
+                <div class="category-icon">
+                    <i class="bi bi-book"></i>
+                </div>
+                <h5>Tutoring</h5>
+                <p>110+ providers</p>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- TOP PROVIDERS -->
+<section class="section providers-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">TOP PROFESSIONALS</span>
+                <h2>Highly rated providers</h2>
+            </div>
+
+            <a href="services.html" class="view-link">
+                View all <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+
+        <div id="topProviders" class="row g-4"></div>
+
+    </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="section">
+    <div class="container">
+
+        <div class="center-heading">
+            <span class="section-label">SIMPLE PROCESS</span>
+            <h2>How ServiceHub works</h2>
+            <p>
+                Getting professional help has never been easier.
+            </p>
+        </div>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <i class="bi bi-search"></i>
+                <h4>Search</h4>
+                <p>Find professionals offering the service you need.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <i class="bi bi-person-check"></i>
+                <h4>Compare</h4>
+                <p>Check ratings, experience, prices and reviews.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <i class="bi bi-calendar-check"></i>
+                <h4>Book</h4>
+                <p>Choose a convenient date and time.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <i class="bi bi-house-check"></i>
+                <h4>Relax</h4>
+                <p>Track your booking until the job is completed.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="section why-section">
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+                <span class="section-label">WHY SERVICEHUB</span>
+
+                <h2>
+                    Your trusted partner
+                    for everyday services.
+                </h2>
+
+                <p class="large-text">
+                    We make finding reliable local professionals
+                    simple, transparent and stress-free.
+                </p>
+
+                <div class="feature-list">
+
+                    <div class="feature">
+                        <i class="bi bi-patch-check-fill"></i>
+                        <div>
+                            <h5>Verified professionals</h5>
+                            <p>Every provider goes through our verification process.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <h5>Safe & secure</h5>
+                            <p>Your booking information is protected.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <i class="bi bi-chat-heart"></i>
+                        <div>
+                            <h5>Real customer reviews</h5>
+                            <p>Make decisions based on genuine experiences.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+                <div class="stats-box">
+
+                    <div class="stat">
+                        <strong>2.5K+</strong>
+                        <span>Professionals</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>15K+</strong>
+                        <span>Bookings</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>4.9</strong>
+                        <span>Average rating</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>98%</strong>
+                        <span>Happy customers</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- REVIEWS -->
+<section class="section">
+    <div class="container">
+
+        <div class="center-heading">
+            <span class="section-label">CUSTOMER STORIES</span>
+            <h2>What our customers say</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "I found an electrician within minutes.
+                        The whole booking process was incredibly easy."
+                    </p>
+
+                    <div class="review-user">
+                        <div class="avatar">SA</div>
+                        <div>
+                            <strong>Sarah Ahmed</strong>
+                            <small>Karachi</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "The provider was professional and arrived
+                        exactly on time. Highly recommended!"
+                    </p>
+
+                    <div class="review-user">
+                        <div class="avatar">HK</div>
+                        <div>
+                            <strong>Hassan Khan</strong>
+                            <small>Karachi</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>
+                        "Much easier than finding someone through
+                        WhatsApp. I can see prices and reviews first."
+                    </p>
+
+                    <div class="review-user">
+                        <div class="avatar">FN</div>
+                        <div>
+                            <strong>Fatima Noor</strong>
+                            <small>Karachi</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box">
+            <div>
+                <span>READY TO GET STARTED?</span>
+                <h2>Find your perfect professional today.</h2>
+            </div>
+
+            <a href="services.html" class="btn btn-light">
+                Explore Services
+                <i class="bi bi-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <a class="navbar-brand fw-bold" href="#">
+                    <span class="logo-icon">
+                        <i class="bi bi-tools"></i>
+                    </span>
+                    Service<span>Hub</span>
+                </a>
+
+                <p>
+                    Connecting you with trusted local
+                    professionals.
+                </p>
+            </div>
+
+            <div>
+                <h6>Company</h6>
+                <a href="#">About</a>
+                <a href="#">How it works</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div>
+                <h6>Services</h6>
+                <a href="services.html">Cleaning</a>
+                <a href="services.html">Plumbing</a>
+                <a href="services.html">Electrician</a>
+            </div>
+
+            <div>
+                <h6>Support</h6>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 ServiceHub. All rights reserved.</p>
+
+            <div>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter-x"></i>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
