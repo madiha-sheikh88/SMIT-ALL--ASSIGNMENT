@@ -34,7 +34,10 @@
     background-color:crimson;
     font-weight:bold
 }
-
+.header ul {
+    display: inline-flex;
+    list-style: none;
+}
 .header img {
     vertical-align:middle    
 }
