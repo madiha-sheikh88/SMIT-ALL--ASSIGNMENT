@@ -8,7 +8,10 @@
 body{
     height: auto;
     width: 100vw;
-    background: radial-gradient(circle at top, #E8B8D2, #93B5E0, #9F8BC2);
+    background-image: url('./asset/pink-blue-white-background.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: "Roboto", sans-serif;
     display: flex;
     align-items: center;
@@ -16,7 +19,7 @@ body{
     flex-direction: column;
 }
 h1{
-    text-shadow: 5px 5px 10px black;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4); 
     padding-top: 100px;
     color: white;
     font-family: "Momo Signature", cursive;
