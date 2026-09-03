@@ -36,21 +36,6 @@ h1.text-center , h2.text-center {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* dashbboard page css */
 
 .dashboardBody{
@@ -60,7 +45,7 @@ h1.text-center , h2.text-center {
 .main-container {
     display: flex;
     width: 100%;
-    height: 100vh;      /* lock to viewport height */
+    min-height: 100vh;      /* lock to viewport height */
     overflow: hidden;    /* prevent the whole page from scrolling */
 }
 
@@ -98,6 +83,7 @@ h1.text-center , h2.text-center {
   .sidebar {
     position: absolute;
     z-index: 10; /* Higher number keeps it above the main content */
+    max-width: 280px !important;
   }
 }
 
