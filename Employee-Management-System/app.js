@@ -1,5 +1,5 @@
 
-// ---- SINGLE SOURCE OF TRUTH ----
+// ---- dummy data added ----
 let employees = [
     { employeeId: 'EMP001', fullName: 'Sarah Khan', email: 'sarah.khan@company.com', phone: '+92 300 1234567', department: 'Human Resources', position: 'HR Manager', salary: 145000, doj: '2022-01-12', status: 'Active' },
     { employeeId: 'EMP002', fullName: 'Ahmed Raza', email: 'ahmed.raza@company.com', phone: '+92 301 9876543', department: 'Engineering', position: 'Software Engineer', salary: 180000, doj: '2023-03-05', status: 'Active' },
@@ -218,3 +218,19 @@ sortDirectionBtn.addEventListener('click', function () {
 
 // ---- INITIAL RENDER on page load ----
 renderTable();
+
+
+// employees dashboard update
+
+function updateDashboardStats() {
+    const totalEmployees = employees.length;
+    const activeEmployees = employees.filter(emp => emp.status === 'Active').length;
+    const inactiveEmployees = employees.filter(emp => emp.status === 'Inactive').length;
+    const totalDepartments = new Set(employees.map(emp => emp.department)).size;
+
+    document.getElementById('statTotalEmployees').textContent = totalEmployees;
+    document.getElementById('statActiveEmployees').textContent = activeEmployees;
+    document.getElementById('statInactiveEmployees').textContent = inactiveEmployees;
+    document.getElementById('statTotalDepartments').textContent = totalDepartments;
+}
+updateDashboardStats();

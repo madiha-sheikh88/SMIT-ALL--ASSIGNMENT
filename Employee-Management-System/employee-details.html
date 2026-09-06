@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dashboard of EMS</title>
+    <title>Employee Details of EMS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -26,16 +26,17 @@
     </div>
     <main class="main-container d-flex align-item-center w-100">
 
-        <!-- this is my sidebar -->
+        <!-- this is my sidebar-->
         <div class="sidebar">
             <div class="collapse d-md-block" id="sidebarCollapse">
-                <div class="d-flex flex-column p-1 text-bg-dark sidebar-inner"><img src="./asset/logo.png" alt="">
+                <div class="d-flex flex-column p-1 text-bg-dark sidebar-inner"><img
+                        src="./asset/logo.png" alt="">
                     <hr>
                     <ul class="nav nav-pills flex-column mb-auto">
                         <li class="nav-item"> <a href="./index.html" class="nav-link active" aria-current="page">
                                 Home
                             </a> </li>
-                        <li> <a href="#" class="nav-link text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        <li> <a href="./dashboard.html" class="nav-link text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
                                     class="lucide lucide-layout-dashboard w-5 h-5 shrink-0 opacity-80 group-hover:opacity-100"
@@ -47,7 +48,7 @@
                                 </svg>
                                 Dashboard
                             </a> </li>
-                        <li> <a href="./employee-details.html" class="nav-link text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        <li> <a href="#" class="nav-link text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                     height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
                                     class="lucide lucide-users w-5 h-5 shrink-0 opacity-80 group-hover:opacity-100"
@@ -171,23 +172,23 @@
                 style="background-color: #0d6efd;">
 
                 <div>
-                    <h3>Good Morning, Admin</h3>
-                    <p class="mb-0">You have 2 pending leave requests and 1 payroll batch awaiting authorization.</p>
+                    <h3>Employee Directory</h3>
+                    <p class="mb-0">Manage global team profiles, designations, contracts, and employment status.</p>
                 </div>
                 <!-- add employee button -->
 
-                <a href="#Add-Employee" class="btn-add-employee">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <line x1="19" x2="19" y1="8" y2="14"></line>
-                        <line x1="16" x2="22" y1="11" y2="11"></line>
-                    </svg>
-                    Add New Employee
-                </a>
+                    <a href="#Add-Employee" class="btn-add-employee">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <line x1="19" x2="19" y1="8" y2="14"></line>
+                            <line x1="16" x2="22" y1="11" y2="11"></line>
+                        </svg>
+                        Add New Employee
+                    </a>
             </div>
-            <!-- dashboard 4 divs -->
+<!-- dashboard 4 divs -->
             <div class="heading-db text-white shadow-sm p-3 m-2 rounded-2 d-flex justify-content-center align-item-center flex-wrap"
                 style="background-color: #0d6efd;">
                 <div class="row g-3 m-2">
@@ -266,21 +267,161 @@
                     </div>
                 </div>
             </div>
-<!-- departments ended -->
- <!-- charts started -->
-  <div class="heading-db text-white shadow-sm p-1 m-2 rounded-2 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
-                <div class="chart-container bg-white p-3 rounded-2 shadow-sm">
-                    <canvas id="employeeChart"></canvas>
+
+    <!-- search bar -->
+<!-- search bar -->
+<div class="heading-db text-white shadow-sm p-3 m-2 rounded-2 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3"
+     style="background-color: #0d6efd;">
+
+    <!-- 1. Search Form -->
+    <form class="search-form d-flex m-0 w-100" role="search" style="max-width: 500px;">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+
+    <!-- 2. sort Button -->
+<div class="d-flex gap-2 flex-shrink-0">
+    <select class="form-select" id="sortField" style="max-width: 180px;">
+        <option value="fullName">Sort by Name</option>
+        <option value="department">Sort by Department</option>
+        <option value="doj">Sort by Joining Date</option>
+        <option value="salary">Sort by Salary</option>
+    </select>
+<button class="btn btn-dark flex-shrink-0" type="button" id="sortDirectionBtn" data-sort-order="asc" title="Toggle ascending/descending">
+    <svg id="sortIcon" xmlns="http://w3.org" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="M3.5 2.5a.5.5 0 0 0-1 0v8.793l-1.146-1.147a.5.5 0 0 0-.708.708l2 1.999.007.007a.497.497 0 0 0 .7-.006l2-2a.5.5 0 0 0-.707-.708L3.5 11.293V2.5zm3.5 1a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM7.5 6a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM7 9.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zM7.5 12a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+    </svg>
+    <span class="ms-1" id="sortDirectionLabel">Asc</span>
+</button>
+</div>
+
+</div>
+
+<!-- employee management table -->
+ <div class="table-card m-2">
+    <div class="table-responsive">
+        <table class="table table-dark table-hover employee-table mb-0">
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Joining Date</th>
+            <th>Status</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody id="employeeTableBody">
+        <!-- JS fills this in -->
+    </tbody>
+</table>
+    </div>
+</div>
+<!-- employee management table ended -->
+<form id="registration-form">
+            <h1 class="text-center p-2" id="Add-Employee">Add New Employee</h1>
+            <section class="container form-sec my-2">
+                <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-info"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user w-5 h-5" aria-hidden="true" style="color:#0B73B7">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></span><span>Personal Details</span></h3>
+                <div class="row">
+                    <!-- Full Name field -->
+                    <div class="col-md-12 col-lg-6"> <label for="full-name" class="form-label">Full Name <span
+                                class="mandatory">*</span></label>
+                        <input type="text" class="form-control form-control-md p-3 mb-3" id="full-name"
+                            placeholder="Enter your full name">
+                    </div>
+                    <!-- Email field -->
+                    <div class="col-md-12 col-lg-6"> <label for="email" class="form-label">Email <span
+                                class="mandatory">*</span></label>
+                        <input type="email" class="form-control form-control-md p-3 mb-3" id="email"
+                            placeholder="your.email@example.com">
+                    </div>
+                    <!-- Phone Number field -->
+                    <div class="col-md-12 col-lg-6"> <label for="phone-number" class="form-label">Phone Number <span
+                                class="mandatory">*</span></label>
+                        <input type="tel" class="form-control form-control-md p-3 mb-3" id="phone-number"
+                            placeholder="Enter your phone number">
+                    </div>
+            </section>
+
+            <section class="container form-sec my-2">
+                <h3 class="d-flex align-item-center gap-2 py-4"><span class="svg-info"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-user w-5 h-5" aria-hidden="true" style="color:#0B73B7">
+                            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg></span><span>Employment Details</span></h3>
+                <div class="row">
+
+                    <!-- Employee ID field -->
+                    <div class="col-md-12 col-lg-6"> <label for="Employee-ID" class="form-label">Employee ID <span
+                                class="mandatory">*</span></label>
+                        <input type="text" class="form-control form-control-md p-3 mb-3" id="Employee-ID"
+                            placeholder="Enter your Employee ID">
+                    </div>
+                    <!-- Select Department -->
+                    <div class="col-md-12 col-lg-6"> <label for="Department" class="form-label">Department
+                            <span class="mandatory">*</span></label>
+                        <select id="Department" class="form-select form-select-md p-3 mb-3"
+                            aria-label="Default select example">
+                            <option selected>Select your Department</option>
+                            <option value="Human-Resources">Human Resources</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Marketing">Marketing</option>
+                        </select>
+                    </div>
+                    <!-- Position field -->
+                    <div class="col-md-12 col-lg-6"> <label for="Position" class="form-label">Position <span
+                                class="mandatory">*</span></label>
+                        <input type="text" class="form-control form-control-md p-3 mb-3" id="Position"
+                            placeholder="Enter your Position">
+                    </div>
+                    <!-- salary field -->
+                    <div class="col-md-12 col-lg-6"> <label for="salary" class="form-label">Salary <span
+                                class="mandatory">*</span></label>
+                        <input type="number" class="form-control form-control-md p-3 mb-3" id="salary"
+                            placeholder="Enter your salary">
+                    </div>
+                    <!-- date of joining field -->
+                    <div class="col-md-12 col-lg-6"> <label for="doj" class="form-label">Date of Joining <span
+                                class="mandatory">*</span></label>
+                        <input type="date" class="form-control form-control-md p-3 mb-3" id="doj">
+                    </div>
+                    <!-- Select Status ( Active, Probation, Trainee) field -->
+                    <div class="col-md-12 col-lg-6"> <label for="status" class="form-label">Status
+                            <span class="mandatory">*</span></label>
+                        <select id="status" class="form-select form-select-md p-3 mb-3"
+                            aria-label="Default select example">
+                            <option selected>Status</option>
+                            <option value="Active">Active</option>
+                            <option value="inactive">Inactive</option>
+                        </select>
+                    </div>
+
                 </div>
-                <div class="chart-container bg-white p-3 rounded-2 shadow-sm">
-                    <canvas id="departmentChart"></canvas>
+            </section>
+            <section class="container form-sec my-2">
+                <div class="button-group">
+                    <button class="btn btn-cancel">Cancel</button>
+                    <button class="btn btn-save">Save & Add Employee</button>
                 </div>
-            </div>
-            <!-- charts ended   -->
+
+            </section>
+
+        </form>
         </div>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="./chart.js"></script>
+    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
